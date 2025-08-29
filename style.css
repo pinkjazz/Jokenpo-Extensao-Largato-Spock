@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('./assets/big-bang.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container {
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.671);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #F20544;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff0044;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.822);
+}
+
+.p1 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #baff27;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    font-size: 45px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#Rock {
+    background-color: #ff0649;
+}
+
+#Paper {
+    background-color: #0571b4;
+}
+
+#Scissors {
+    background-color: #a5d63a;
+}
+
+#Lizard {
+    background-color: #ffee02;
+}
+
+#Spock {
+    background-color: #F2522E;
+}
+
+.points {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paragrafo {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+    color: #fff;
+}
+
+#score {
+    color: #24c5f7;
+}
+
+#ai-score {
+    color: #f75a1c;
+}
+
+.result {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+    color: rgb(54, 0, 248);
+    text-align: center;
+}
+
+
+/* Estilo especial para o botão de reset */
+#reset {
+    font-size: 15px;
+    padding: 6px 7px;
+    background: #f0f0f0;
+    color: #333;
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 6px #0002;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+#reset:hover {
+    background: #e0e0e0;
+    color: #ff0649;
+    transform: rotate(-20deg) scale(1.1);
+}
+
+
+/* Popup de vitória */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#popup.popup-hidden {
+    display: none;
+}
+
+.popup-content {
+    background: #afd1d1;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #0005;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+#close-popup {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    font-size: 18px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#close-popup:hover {
+    background: #0056b3;
+}
+
+h2 {
+    color: #fc5508;
+    margin-bottom: 20px;
+    text-align: center;
+}

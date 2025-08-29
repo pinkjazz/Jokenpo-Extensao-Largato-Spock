@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>JokenPô - DevClub</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao JokenPô</h1>
+        <h3>"Pedra, Papel, Tesoura, Lagarto e Spock"</h3>
+        <p class="p1">Escolha sua jogada:</p>
+        <div class="buttons">
+            <button id="Rock" onclick="playHuman('Rock')">&#x1F44A;</button>
+            <button id="Paper" onclick="playHuman('Paper')">&#x1F590;</button>
+            <button id="Scissors" onclick="playHuman('Scissors')">&#x270C;</button>
+            <button id="Lizard" onclick="playHuman('Lizard')">&#x1F98E;</button>
+            <button id="Spock" onclick="playHuman('Spock')">&#x1F596;</button>
+        </div>
+        <p class="result"></p>
+        <div class="points">
+            <p class="paragrafo">Sua pontuação: <span id="score">0</span></p>
+            <p class="paragrafo">Pontuação da IA: <span id="ai-score">0</span></p>
+            <button id="reset" onclick="resetGame()">&#x21BA;</button>
+        </div>
+    </div>
+
+        <!-- Popup de vitória -->
+    <div id="popup" class="popup-hidden">
+        <div class="popup-content">
+            <h2 id="popup-title"></h2>
+            <img id="popup-img" src="" alt="Popup" style="max-width: 100%; max-height: 350px; display: block; margin: 0 auto;" />
+            <button id="close-popup" onclick="resetGame()">Fechar</button>
+        </div>
+    </div>
+</body>
+<script src="./scripts.js"></script>
+</html>
