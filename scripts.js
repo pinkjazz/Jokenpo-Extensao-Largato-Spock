@@ -18,9 +18,24 @@ const playMachine = () => {
     return choices[randomNumber];
 }
 
+const emojiMap = {
+    'Rock': '✊',
+    'Paper': '🖐️',
+    'Scissors': '✌️',
+    'Lizard': '🦎',
+    'Spock': '🖖'
+};
+
+const humanChoiceSpan = document.getElementById('human-choice');
+const iaChoiceSpan = document.getElementById('ia-choice');
+
 const playTheGame = (human, machine) => {
     console.log('Jogada do jogador: ' + human);
     console.log('Jogada da máquina: ' + machine);
+
+    // Atualiza escolhas na tela
+    if (humanChoiceSpan) humanChoiceSpan.textContent = `Você: ${emojiMap[human] || ''}`;
+    if (iaChoiceSpan) iaChoiceSpan.textContent = `IA: ${emojiMap[machine] || ''}`;
 
     if (human === machine) {
         result.textContent = 'Deu Empate!';
@@ -71,5 +86,7 @@ function resetGame() {
     humanScore.textContent = 0;
     aiScore.textContent = 0;
     result.textContent = '';
+    if (humanChoiceSpan) humanChoiceSpan.textContent = 'Você: ';
+    if (iaChoiceSpan) iaChoiceSpan.textContent = 'IA: ';
     popup.classList.add('popup-hidden');
 }
