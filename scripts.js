@@ -8,6 +8,15 @@ const popupImg = document.getElementById('popup-img');
 let humanScoreNumber = 0;
 let aiScoreNumber = 0;
 
+const emojiMap = {
+    'Rock': '✊',
+    'Paper': '🖐️',
+    'Scissors': '✌️',
+    'Lizard': '🦎',
+    'Spock': '🖖'
+};
+
+
 const playHuman = (humanChoice) => {
     playTheGame(humanChoice, playMachine());
 }
@@ -18,13 +27,6 @@ const playMachine = () => {
     return choices[randomNumber];
 }
 
-const emojiMap = {
-    'Rock': '✊',
-    'Paper': '🖐️',
-    'Scissors': '✌️',
-    'Lizard': '🦎',
-    'Spock': '🖖'
-};
 
 const humanChoiceSpan = document.getElementById('human-choice');
 const iaChoiceSpan = document.getElementById('ia-choice');
